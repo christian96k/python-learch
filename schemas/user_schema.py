@@ -1,9 +1,9 @@
 from sqlalchemy import Column, Integer, String, DateTime
 from sqlalchemy.sql import func
-from database.database import Base  # Assicurati che Base sia importato correttamente
+from database.database import Base
 
 class UserSchema(Base):
-    __tablename__ = "users"  # Definisce il nome della tabella come 'users'
+    __tablename__ = "users"
 
     id = Column(Integer, primary_key=True, index=True)
     username = Column(String, unique=True, index=True)
