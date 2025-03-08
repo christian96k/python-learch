@@ -10,7 +10,7 @@ from sqlalchemy.orm import Session
 
 class ItemsManager:
     def __init__(self, db: Session):
-        self.db = db  # Il manager riceve il database dalla dependency injection
+        self.db = db
 
     async def manage_create_item(self, item: ItemCreateDTO):
         return await create_item(item, self.db)
